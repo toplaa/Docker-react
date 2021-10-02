@@ -1,0 +1,9 @@
+sudo: require
+services:
+  - docker
+
+before_install:
+  - docker build  -t toplaa/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run toplaa/docker-react npm run test -- --coverage
