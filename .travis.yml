@@ -1,4 +1,4 @@
-sudo: require
+sudo: required
 language: generic
 
 services:
@@ -18,6 +18,6 @@ deploy:
   bucket_name: "elasticbeanstalk-us-east-2-340729127361"
   bucket_path: "docker"
   on:
-    branch: master
+    branch: main
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
